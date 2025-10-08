@@ -46,14 +46,11 @@ python main.py
 2. **运行训练**：执行 `python main.py`
 3. **查看结果**：程序自动生成可视化图像
 
-### 配置示例
+### 配置条件
 
-在 `config.py` 中配置边界条件：
-边界条件类型配置
-BOUNDARY_LEFT = 'fixed' # 左侧：固定边界
-BOUNDARY_RIGHT = 'function' # 右侧：函数边界
-BOUNDARY_TOP = 'free' # 上侧：自由边界
-BOUNDARY_BOTTOM = 'fixed' # 下侧：固定边界
+在 `config.py` 中配置如训练率、边界条件等等超参数
+
+
 ### 边界条件类型
 
 - **固定边界**：位移为零的约束边界
