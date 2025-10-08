@@ -62,16 +62,27 @@ BOUNDARY_BOTTOM = 'fixed' # 下侧：固定边界
 - **插值边界**：通过插值点定义复杂边界位移
 
 ## 项目结构
+
 PINN-2D-Plate-Analysis/
+
 ├── main.py # 主训练程序
+
 ├── pinn_model.py # PINN神经网络模型
+
 ├── physics.py # 物理方程和硬约束
+
 ├── boundary_conditions.py # 边界条件定义
+
 ├── config.py # 配置参数
+
 ├── utils.py # 辅助函数和绘图
+
 ├── boundary_visualization.py # 边界可视化
+
 ├── requirements.txt # 项目依赖
+
 └── README.md # 项目说明
+
 ## 贡献指南
 
 我们欢迎各种形式的贡献！请参考以下步骤：
