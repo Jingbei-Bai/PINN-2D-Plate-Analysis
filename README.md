@@ -1,61 +1,94 @@
 # PINN-2D-Plate-Analysis
-PINN-2D-Plate-Analysis 是一个创新的计算力学工具，结合了深度学习和传统力学分析的优势。该项目使用物理信息神经网络（Physics-Informed Neural Networks, PINN）来求解二维弹性体的位移场和应力场，特别针对复杂边界条件进行了优化。
 
-🎯 项目目标
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-提供一种无需网格划分的力学分析方法
+一个基于物理信息神经网络（PINN）的二维平板力学分析工具，支持多种边界条件配置，用于解决固体力学中的弹性变形问题。
 
-支持多种复杂边界条件的灵活配置
+## 项目简介
 
-实现高精度的位移和应力预测
+PINN-2D-Plate-Analysis 是一个创新的计算力学软件，它将深度学习的强大能力与传统的固体力学原理相结合。该项目利用物理信息神经网络（PINN）技术，为二维弹性体的力学分析提供了一种全新的解决方案。
 
-为科研和工程应用提供可靠的计算工具
+### 技术背景
 
-🔬 技术特点
+传统的有限元方法（FEM）在解决复杂边界条件问题时需要精细的网格划分和大量的计算资源。PINN方法通过将物理方程直接嵌入神经网络的训练过程中，实现了无需网格划分的高精度计算，特别适合处理复杂边界条件和逆问题。
 
-​​物理引导的深度学习​​：将物理方程直接嵌入神经网络训练过程
+### 核心创新
 
-​​硬约束边界条件​​：确保边界条件被严格满足
+1. **多边界条件支持**: 首次在PINN框架中实现了固定、自由、函数和插值四种边界条件的统一处理
+2. **硬约束技术**: 通过距离函数确保边界条件被严格满足，提高了计算精度
+3. **自适应损失平衡**: 动态调整PDE残差和边界条件损失的权重，优化训练过程
+4. **全面可视化**: 提供从位移场到应力场的完整力学分析可视化
 
-​​自适应损失平衡​​：动态调整PDE残差和边界条件的权重
+## 安装指南
 
-​​高分辨率可视化​​：提供详细的力学场分布分析
+### 环境要求
 
-✨ 核心特性
+- Python 3.8+
+- PyTorch 1.9+
+- CUDA（可选，用于GPU加速）
 
-🎛️ 支持的边界条件
+### 安装步骤
 
-​​固定边界​​：位移为零的约束边界
+1. 克隆项目
+git clone https://github.com/Jingbei-Bai/PINN-2D-Plate-Analysis.git
+cd PINN-2D-Plate-Analysis
+2. 安装依赖
+pip install -r requirements.txt
+3. 运行示例
+python main.py
+## 使用说明
 
-​​自由边界​​：无约束，允许自由变形
+### 快速开始
 
-​​函数边界​​：通过数学函数定义边界位移
+1. **配置参数**：修改 `config.py` 中的参数
+2. **运行训练**：执行 `python main.py`
+3. **查看结果**：程序自动生成可视化图像
 
-​​插值边界​​：通过插值点定义复杂边界位移
+### 配置示例
 
-📊 物理模型
+在 `config.py` 中配置边界条件：
+边界条件类型配置
+BOUNDARY_LEFT = 'fixed' # 左侧：固定边界
+BOUNDARY_RIGHT = 'function' # 右侧：函数边界
+BOUNDARY_TOP = 'free' # 上侧：自由边界
+BOUNDARY_BOTTOM = 'fixed' # 下侧：固定边界
+### 边界条件类型
 
-二维线弹性材料（平面应力假设）
+- **固定边界**：位移为零的约束边界
+- **自由边界**：无约束，允许自由变形
+- **函数边界**：通过数学函数定义边界位移
+- **插值边界**：通过插值点定义复杂边界位移
 
-小变形理论
+## 项目结构
+PINN-2D-Plate-Analysis/
+├── main.py # 主训练程序
+├── pinn_model.py # PINN神经网络模型
+├── physics.py # 物理方程和硬约束
+├── boundary_conditions.py # 边界条件定义
+├── config.py # 配置参数
+├── utils.py # 辅助函数和绘图
+├── boundary_visualization.py # 边界可视化
+├── requirements.txt # 项目依赖
+└── README.md # 项目说明
+## 贡献指南
 
-无体力情况下的平衡方程
+我们欢迎各种形式的贡献！请参考以下步骤：
 
-Von Mises应力计算
+1. Fork 本项目
+2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
+3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
+4. 推送到分支 (`git push origin feature/AmazingFeature`)
+5. 开启 Pull Request
 
-完整的应变-位移关系
+## 许可证
 
-🖼️ 可视化功能
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-位移场云图（x方向和y方向）
+## 联系方式
 
-应变场分布（正应变和剪应变）
-
-应力场分析（正应力和剪应力）
-
-Von Mises应力分布
-
-边界位移详细分析
-
-变形前后对比可视化
+- 项目主页：https://github.com/Jingbei-Bai/PINN-2D-Plate-Analysis
+- 问题反馈：https://github.com/Jingbei-Bai/PINN-2D-Plate-Analysis/issues
+- 邮箱：bjb23@mails.tsinghua.edu.cn
 
