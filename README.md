@@ -4,7 +4,7 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-1.9+-red.svg)](https://pytorch.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-一个基于物理信息神经网络（PINN）的二维平板力学分析工具，支持多种边界条件配置，用于解决固体力学中的弹性变形问题。
+一个基于物理信息神经网络（PINN）的二维平板力学分析工具，支持多种边界条件配置，用于解决固体力学中的弹性变形问题。（遗憾的是，本项目目前并不成熟，我们预计会在未来的三个月内持续更新并融入更加强大的机器学习组件。同时也感谢所有看到/使用本项目的同僚为此项目纠错）
 
 ## 项目简介
 
