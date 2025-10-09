@@ -89,13 +89,16 @@ PINN-2D-Plate-Analysis/
 1. 位移场分布
 <img width="1200" height="500" alt="displacement_field" src="https://github.com/user-attachments/assets/953d8d31-18ef-44b8-9c73-8b7cdf0de52e" />
 图1: x方向和y方向的位移分布
+
 3. 应力应变场
 <img width="1500" height="1000" alt="stress_strain_field" src="https://github.com/user-attachments/assets/1d16ea97-11a4-4df9-bd85-7f77dc315e39" />
 图2: 应变分量和应力分量分布
-4. Von Mises应力分布
+
+5. Von Mises应力分布
 <img width="800" height="600" alt="von_mises_stress" src="https://github.com/user-attachments/assets/29d8988e-1a6d-4d2e-b3fb-ed0e06b094a4" />
 图3: Von Mises等效应力分布
-5. 边界位移分析
+
+7. 边界位移分析
 <img width="4467" height="2968" alt="boundary_displacement_overview" src="https://github.com/user-attachments/assets/e1a2eb99-b016-43c0-b6d9-5849dd25ccba" />
 图4: 边界位移详细分析
 
