@@ -80,6 +80,25 @@ PINN-2D-Plate-Analysis/
 
 └── README.md # 项目说明
 
+## 结果展示
+
+默认配置输出示例
+
+运行默认配置（左侧固定，右侧插值边界，上侧自由，下侧自由）将生成以下结果：
+
+1. 位移场分布
+displacement_field.png
+图1: x方向和y方向的位移分布
+3. 应力应变场
+stress_strain_field.png
+图2: 应变分量和应力分量分布
+4. Von Mises应力分布
+von_mises_stress.png
+图3: Von Mises等效应力分布
+5. 边界位移分析
+boundary_displacement_overview.png
+图4: 边界位移详细分析
+
 ## 贡献指南
 
 我们欢迎各种形式的贡献！请参考以下步骤：
