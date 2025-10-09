@@ -87,7 +87,7 @@ PINN-2D-Plate-Analysis/
 运行默认配置（左侧固定，右侧插值边界，上侧自由，下侧自由）将生成以下结果：
 
 1. 位移场分布
-displacement_field.png
+![项目截图](.displacement_field.png)
 图1: x方向和y方向的位移分布
 3. 应力应变场
 stress_strain_field.png
