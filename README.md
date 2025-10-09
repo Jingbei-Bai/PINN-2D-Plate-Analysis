@@ -42,7 +42,7 @@ python main.py
 
 ### 快速开始
 
-1. **配置参数**：修改 `config.py` 中的参数
+1. **配置参数**：修改 `config.py` `boundary_conditions.py`中的参数
 2. **运行训练**：执行 `python main.py`
 3. **查看结果**：程序自动生成可视化图像
 
